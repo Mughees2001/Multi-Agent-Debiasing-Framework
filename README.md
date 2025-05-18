@@ -1,3 +1,4 @@
+
 # Multi-Agent Debiasing Framework with Online Search Based-Validation
 
 <div align="center">
@@ -14,17 +15,31 @@ On the SQuAD v2 dataset, we compared DeepSeek R-1 and GPT-4, testing each modelâ
 
 Below is the architecture for the Multi-Agent Debiasing Framework. The architecture on the left represents the framework without the Search Agent, whereas the one on the right shows the framework with Search Agent capabilities.
 
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#paper">Paper</a></li>
+    <li><a href="#llms">LLMs</a></li>
+    <li><a href="#built-with">Built With</a></li>
+    <li><a href="#datasets">Datasets</a></li>
+    <li><a href="#multi-agent-bias-removal-framework-without-search-agent">Multi-Agent Bias Removal Framework without Search Agent</a></li>
+    <li><a href="#multi-agent-bias-removal-framework-with-search-agent">Multi-Agent Bias Removal Framework with Search Agent</a></li>
+    <li><a href="#results">Results</a></li>
+  </ol>
+</details>
+
+
 <p align="center">
   <img src="Images/Overview.png" alt="Overview" width="500"/>
 </p>
 
 ## Paper
 
-You can find the paper [here](Multi-Agent%20Debiasing%20Framework.pdf).
+You can find the paper [here](<Multi-Agent Debiasing Framework.pdf>).
 
 ## LLMs
 
-We have tested our framework on total of four different LLMS:
+We have tested our framework on total of four different LLMs:
 
 - GPT-3.5 Turbo  
 - GPT-4  
@@ -47,6 +62,36 @@ We used the BBQ and SQuAD datasets for our evaluation. Below is an overview of e
 - **[SQuAD v2 Dataset](https://huggingface.co/datasets/rajpurkar/squad_v2)**
 - **[BBQ Dataset](https://github.com/nyu-mll/BBQ)**
 
+
+### BBQ Dataset Overview
+
+| Social Group          | BBQ    | BBQ-Hard |
+|----------------------|--------|----------|
+| Age                  | 1,840  | 984      |
+| Disability            | 778    | 312      |
+| Gender                | 2,828  | 1,066    |
+| Nationality           | 1,540  | 529      |
+| Physical Appearance   | 788    | 111      |
+| Race/Ethnicity        | 3,352  | 974      |
+| Religion              | 600    | 112      |
+| Sexual Orientation    | 432    | 77       |
+| Socioeconomic Status  | 3,432  | 1,140    |
+| **Overall**           | 15,590 | 5,305    |
+
+### SQuAD Dataset Overview
+
+| Answer Type          | Percentage | Example                |
+|----------------------|------------|------------------------|
+| Date                 | 8.9%       | 19 October 1512        |
+| Other Numeric        | 10.9%      | 12                     |
+| Person               | 12.9%      | Thomas Coke            |
+| Location             | 4.4%       | Germany                |
+| Other Entity         | 15.3%      | ABC Sports             |
+| Common Noun Phrase   | 31.8%      | property damage        |
+| Adjective Phrase     | 3.9%       | second-largest         |
+| Verb Phrase          | 5.5%       | returned to Earth      |
+| Clause               | 3.7%       | to avoid trivialization|
+| Other                | 2.7%       | quietly                |
 
 ## Multi-Agent Bias Removal Framework without Search Agent
 
@@ -84,5 +129,3 @@ We used the BBQ and SQuAD datasets for our evaluation. Below is an overview of e
 ## Results
 
 Our evaluation on the BBQ dataset demonstrated that the baseline Multi-Agent Bias Removal Framework without the Search Agent effectively reduced bias scores from 0.062 to 0.008 and improved exact match accuracy by 3.7%, increasing from 84.2% to 87.9%. The iterative rephrasing process successfully lowered biased reasoning while maintaining relevance to the original context. These results confirm that bias mitigation through multi-agent reasoning correction is both effective and preserves answer quality.
-
-
