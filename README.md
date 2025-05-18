@@ -20,6 +20,24 @@ On the SQuAD v2 dataset, we compared DeepSeek R-1 and GPT-4, testing each modelâ
 
 You can find the paper [here](Multi-Agent%20Debiasing%20Framework.pdf).
 
+## LLMs
+
+We have tested our framework on total of four different LLMS:
+
+- GPT-3.5 Turbo  
+- GPT-4  
+- Claude 3 Haiku  
+- DeepSeek
+
+## Built With
+
+[![ChatGPT](https://img.shields.io/badge/ChatGPT-74aa9c?logo=openai&logoColor=white)](https://chat.openai.com/)
+[![Claude](https://img.shields.io/badge/Claude-D97757?logo=claude&logoColor=fff)](https://claude.ai/)
+[![Deepseek](https://custom-icon-badges.demolab.com/badge/Deepseek-4D6BFF?logo=deepseek&logoColor=fff)](https://deepseek.ai/)
+[![DuckDuckGo](https://img.shields.io/badge/DuckDuckGo-FF5722?logo=duckduckgo&logoColor=white)](https://duckduckgo.com/)
+[![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff)](https://www.python.org/)
+[![Google Colab](https://img.shields.io/badge/Google%20Colab-F9AB00?logo=googlecolab&logoColor=fff)](https://colab.research.google.com/)
+
 ## Datasets
 
 We used the BBQ and SQuAD datasets for our evaluation. Below is an overview of each dataset:
