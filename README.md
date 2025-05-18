@@ -1,10 +1,8 @@
 # Multi-Agent Debiasing Framework with Online Search Based-Validation
 
-
 <div align="center">
 Mughees Ur Rehman (mughees@vt.edu), Ayush Roy (ayushroy24@vt.edu)
 </div>
-
 
 ## Abstract
 
@@ -44,9 +42,62 @@ R-1 saw a decline, with Exact-Match accuracy dropping from 36.0%
 to 14.0%, and the F1 score falling from 40.5% to 24.3%. These mixed
 outcomes provide partial support for the hypothesis that external
 web grounding enhances fact retrieval.
+<p align="center">
+  <img src="Images/Overview.png" alt="Overview" width="500"/>
+</p>
+
+
+
+## Datasets
+
+We used the BBQ and SQuAD datasets for our evaluation. Below is an overview of each dataset:
+
+- **[SQuAD v2 Dataset](https://huggingface.co/datasets/rajpurkar/squad_v2)**
+- **[BBQ Dataset](https://github.com/nyu-mll/BBQ)**
+
+### BBQ Dataset Overview
+
+| Social Group          | BBQ    | BBQ-Hard |
+|----------------------|--------|----------|
+| Age                  | 1,840  | 984      |
+| Disability            | 778    | 312      |
+| Gender                | 2,828  | 1,066    |
+| Nationality           | 1,540  | 529      |
+| Physical Appearance   | 788    | 111      |
+| Race/Ethnicity        | 3,352  | 974      |
+| Religion              | 600    | 112      |
+| Sexual Orientation    | 432    | 77       |
+| Socioeconomic Status  | 3,432  | 1,140    |
+| **Overall**           | 15,590 | 5,305    |
+
+### SQuAD Dataset Overview
+
+| Answer Type          | Percentage | Example                |
+|----------------------|------------|------------------------|
+| Date                 | 8.9%       | 19 October 1512        |
+| Other Numeric        | 10.9%      | 12                     |
+| Person               | 12.9%      | Thomas Coke            |
+| Location             | 4.4%       | Germany                |
+| Other Entity         | 15.3%      | ABC Sports             |
+| Common Noun Phrase   | 31.8%      | property damage        |
+| Adjective Phrase     | 3.9%       | second-largest         |
+| Verb Phrase          | 5.5%       | returned to Earth      |
+| Clause               | 3.7%       | to avoid trivialization|
+| Other                | 2.7%       | quietly                |
+
 
 ## Multi-Agent Bias Removal Framework without Search Agent
 
+<p align="center">
+  <img src="Images/NoSearchAgent.png" alt="Without SearchAgent" width="200"/>
+</p>
 
 
+## Multi-Agent Bias Removal Framework with Search Agent
+
+<p align="center">
+  <img src="Images/SearchAgent.png" alt="Without SearchAgent" width="200"/>
+</p>
+
+<!-- Your content for this section goes here -->
 
