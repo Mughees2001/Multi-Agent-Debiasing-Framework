@@ -12,6 +12,8 @@ We evaluated MABRF on the BBQ dataset with 110 data points across 11 social cate
 
 On the SQuAD v2 dataset, we compared DeepSeek R-1 and GPT-4, testing each model’s performance with internal knowledge alone versus augmented with the Search agent. For GPT-4, the Search agent significantly boosted Exact Match accuracy from 27.0% to 45.0% and increased the F1 score from 37.8% to 49.8%. Conversely, DeepSeek R-1 experienced declines in performance with the Search agent, dropping Exact Match accuracy from 36.0% to 14.0% and F1 score from 40.5% to 24.3%. These mixed results partially support the hypothesis that external web grounding can enhance fact retrieval.
 
+Below is the architecture for the Multi-Agent Debiasing Framework. The architecture on the left represents the framework without the Search Agent, whereas the one on the right shows the framework with Search Agent capabilities.
+
 <p align="center">
   <img src="Images/Overview.png" alt="Overview" width="500"/>
 </p>
