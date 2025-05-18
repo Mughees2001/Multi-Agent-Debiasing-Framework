@@ -6,45 +6,16 @@ Mughees Ur Rehman (mughees@vt.edu), Ayush Roy (ayushroy24@vt.edu)
 
 ## Abstract
 
-Large language models (LLMs) can produce human-like text, but
-they often reflect the biases found in the data used to train them.
-There have been various efforts in the past to remove biases from
-LLMs. We have proposed a Multi-Agent Bias Removal Framework
-(MABRF) designed to systematically detect and mitigate biases
-in reasoning while maintaining relevancy in reasoning generated
-by LLMs. In our system, Multi-LLM agents work together to de-
-tect, evaluate, and mitigate biases in reasoning context. The core
-idea is to deploy agents in different settings. We compare two
-multi-agent moderation workflows. In the baseline, a Judge agent
-evaluates each answer for bias and relevance, and a Rephrasing
-agent iteratively refines any biased or off-topic reasoning using
-only its internal knowledge. In the enhanced workflow, we add
-a search agent that retrieves and summarizes external evidence
-before each rephrase, helping the rephrasing agent to obtain exter-
-nal knowledge to mitigate bias more efficiently. We evaluated the
-approach on the BBQ dataset, conducting experiments with 110
-data points across 11 categories (10 per category) using DeepSeek,
-GPT-3.5-Turbo, GPT-4, and Claude-3-Haiku. The comparison in-
-volved bias scores and accuracy, both with and without the search
-agent. On the BBQ benchmark, the baseline MABRF pipeline re-
-duced the mean bias score from 0.062 to 0.008, while improving
-exact match accuracy by 3.7% (from 84.2% to 87.9%). Incorporating
-the search agent further reduced bias across most social categories,
-with the most notable result for GPT-4 bias dropped from 0.08
-to 0.00 (neutral), and accuracy increased by 0.1 points. For the
-SQuAD v2 dataset, we tested DeepSeek R-1 and GPT-4, comparing
-each model’s performance with only the LLM’s internal knowledge
-against its performance when augmented with the search agent.
-For GPT-4, integrating the search agent resulted in significant im-
-provements: Exact Match accuracy increased from 27.0% to 45.0%,
-and the F1 score rose from 37.8% to 49.8%. In contrast, DeepSeek
-R-1 saw a decline, with Exact-Match accuracy dropping from 36.0%
-to 14.0%, and the F1 score falling from 40.5% to 24.3%. These mixed
-outcomes provide partial support for the hypothesis that external
-web grounding enhances fact retrieval.
+Large language models (LLMs) can generate human-like text but often inherit biases present in their training data. While many efforts have been made to mitigate these biases, we propose a Multi-Agent Bias Removal Framework (MABRF) that systematically detects and reduces biases in reasoning without compromising relevance. Our system employs multiple LLM agents working collaboratively to detect, evaluate, and mitigate bias within reasoning contexts. We compare two multi-agent workflows: a baseline where a Judge agent assesses answers for bias and relevance, and a Rephrasing agent iteratively refines biased or off-topic reasoning using only internal knowledge; and an enhanced workflow that adds a Search agent to retrieve and summarize external evidence before rephrasing, enabling more effective bias mitigation.
+
+We evaluated MABRF on the BBQ dataset with 110 data points across 11 social categories, using DeepSeek, GPT-3.5-Turbo, GPT-4, and Claude-3-Haiku. The baseline pipeline reduced the mean bias score from 0.062 to 0.008 and improved exact match accuracy by 3.7% (from 84.2% to 87.9%). Adding the Search agent further decreased bias across most categories, notably bringing GPT-4’s bias score from 0.08 to a neutral 0.00, with a slight accuracy improvement of 0.1 points.
+
+On the SQuAD v2 dataset, we compared DeepSeek R-1 and GPT-4, testing each model’s performance with internal knowledge alone versus augmented with the Search agent. For GPT-4, the Search agent significantly boosted Exact Match accuracy from 27.0% to 45.0% and increased the F1 score from 37.8% to 49.8%. Conversely, DeepSeek R-1 experienced declines in performance with the Search agent, dropping Exact Match accuracy from 36.0% to 14.0% and F1 score from 40.5% to 24.3%. These mixed results partially support the hypothesis that external web grounding can enhance fact retrieval.
 <p align="center">
   <img src="Images/Overview.png" alt="Overview" width="500"/>
 </p>
+
+
 
 
 
